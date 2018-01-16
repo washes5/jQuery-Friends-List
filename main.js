@@ -7,8 +7,14 @@ $(document).ready(function() {
         $('#input').val("");
     })
 
-function createFriend(name) {
-    return $(`<li>${name}</li>`).addClass('list-group-item list-group-item-action list-group-item-dark');
-}
+    $('#friend-list').on('click', 'li', function(e) {
+        $(this).remove();
+        console.log('clicked!');
+        console.log($(this));
+    })
+
+    function createFriend(name) {
+        return $(`<li>${name}</li>`).addClass('list-group-item list-group-item-action list-group-item-dark');
+    }
 
 });
